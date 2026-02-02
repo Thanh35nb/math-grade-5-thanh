@@ -1,0 +1,85 @@
+.xp-bar-container {
+  background: var(--glass-bg-dark);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-lg);
+}
+
+.xp-bar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-md);
+}
+
+.level-badge {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-xs) var(--space-md);
+  background: var(--gradient-warning);
+  border-radius: var(--radius-full);
+  font-weight: var(--font-bold);
+  color: var(--color-gray-900);
+}
+
+.xp-info {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  color: var(--color-gray-400);
+  font-size: var(--text-sm);
+}
+
+.xp-progress-wrapper {
+  position: relative;
+  height: 12px;
+  background: var(--color-gray-800);
+  border-radius: var(--radius-full);
+  overflow: visible;
+  margin-bottom: var(--space-sm);
+}
+
+.xp-progress-bar {
+  height: 100%;
+  background: var(--gradient-primary);
+  border-radius: var(--radius-full);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(91, 110, 247, 0.5);
+}
+
+.xp-progress-shine {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.3) 50%,
+    transparent 100%
+  );
+  animation: shimmer 2s infinite;
+}
+
+.level-up-indicator {
+  position: absolute;
+  right: -10px;
+  top: -30px;
+  background: var(--gradient-success);
+  color: var(--color-gray-900);
+  padding: var(--space-xs) var(--space-md);
+  border-radius: var(--radius-md);
+  font-weight: var(--font-bold);
+  font-size: var(--text-xs);
+  animation: bounce 1s ease infinite;
+  box-shadow: 0 4px 15px rgba(56, 201, 118, 0.5);
+}
+
+.xp-remaining {
+  text-align: center;
+  font-size: var(--text-xs);
+  color: var(--color-gray-500);
+}

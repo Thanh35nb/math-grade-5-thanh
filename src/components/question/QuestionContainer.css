@@ -1,0 +1,100 @@
+.question-container {
+  composes: glass;
+  padding: var(--space-2xl);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.question-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-xl);
+  padding-bottom: var(--space-lg);
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.question-meta {
+  display: flex;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+}
+
+.question-module,
+.question-topic,
+.question-difficulty {
+  padding: var(--space-xs) var(--space-md);
+  border-radius: var(--radius-full);
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  text-transform: capitalize;
+}
+
+.question-module {
+  background: var(--gradient-primary);
+  color: var(--color-white);
+}
+
+.module-arithmetic { background: var(--gradient-arithmetic); }
+.module-geometry { background: var(--gradient-geometry); }
+.module-motion { background: var(--gradient-motion); }
+.module-logic { background: var(--gradient-logic); }
+
+.question-topic {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  color: var(--color-gray-300);
+}
+
+.question-difficulty {
+  background: var(--glass-bg-dark);
+  border: 1px solid var(--glass-border);
+}
+
+.difficulty-basic {
+  color: var(--color-success);
+}
+
+.difficulty-advanced {
+  color: var(--color-warning);
+}
+
+.question-xp {
+  font-weight: var(--font-bold);
+  color: var(--color-warning);
+  font-size: var(--text-lg);
+}
+
+.question-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+.question-text {
+  font-size: var(--text-xl);
+  color: var(--color-white);
+  line-height: var(--leading-relaxed);
+}
+
+.next-button {
+  margin-top: var(--space-lg);
+  align-self: flex-end;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .question-container {
+    padding: var(--space-lg);
+  }
+
+  .question-header {
+    flex-direction: column;
+    gap: var(--space-md);
+    align-items: flex-start;
+  }
+
+  .question-text {
+    font-size: var(--text-lg);
+  }
+}

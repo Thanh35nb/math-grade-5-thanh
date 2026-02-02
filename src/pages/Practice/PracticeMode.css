@@ -1,0 +1,105 @@
+.practice-mode {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-xl);
+  background: var(--color-gray-900);
+}
+
+.practice-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-xl);
+  padding-bottom: var(--space-md);
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.practice-back {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  color: var(--color-gray-300);
+  font-size: var(--text-sm);
+  transition: color var(--transition-fast);
+}
+
+.practice-back:hover {
+  color: var(--color-white);
+}
+
+.practice-info {
+  display: flex;
+  gap: var(--space-lg);
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  color: var(--color-gray-400);
+  font-size: var(--text-sm);
+}
+
+.practice-xp {
+  padding: var(--space-xs) var(--space-md);
+  background: var(--gradient-warning);
+  border-radius: var(--radius-full);
+  font-size: var(--text-sm);
+  font-weight: var(--font-bold);
+  color: var(--color-gray-900);
+}
+
+.practice-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-xl) 0;
+}
+
+.practice-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--glass-border);
+}
+
+.session-stats {
+  display: flex;
+  gap: var(--space-lg);
+  color: var(--color-gray-400);
+  font-size: var(--text-sm);
+}
+
+.progress-dots {
+  display: flex;
+  gap: var(--space-sm);
+}
+
+.progress-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-full);
+  background: var(--color-gray-700);
+  transition: all var(--transition-fast);
+}
+
+.progress-dot.active {
+  background: var(--color-primary);
+  transform: scale(1.2);
+}
+
+.progress-dot.completed {
+  background: var(--color-success);
+}
+
+.practice-loading {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-gray-400);
+  font-size: var(--text-lg);
+}

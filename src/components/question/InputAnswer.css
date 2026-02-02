@@ -1,0 +1,103 @@
+.input-answer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.input-wrapper {
+  display: flex;
+  gap: var(--space-sm);
+  padding: var(--space-sm);
+  background: var(--glass-bg-dark);
+  border: 2px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-fast);
+}
+
+.input-wrapper:focus-within {
+  border-color: var(--color-primary);
+  background: var(--glass-bg);
+}
+
+.input-invalid {
+  border-color: var(--color-error) !important;
+}
+
+.input-disabled {
+  background: var(--glass-bg-dark);
+  cursor: not-allowed;
+}
+
+.answer-input {
+  flex: 1;
+  padding: var(--space-md);
+  background: transparent;
+  border: none;
+  color: var(--color-white);
+  font-size: var(--text-lg);
+  outline: none;
+}
+
+.answer-input::placeholder {
+  color: var(--color-gray-500);
+}
+
+.answer-input:disabled {
+  cursor: not-allowed;
+}
+
+.submit-button {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-md) var(--space-lg);
+  background: var(--gradient-primary);
+  border-radius: var(--radius-md);
+  color: var(--color-white);
+  font-weight: var(--font-semibold);
+  transition: all var(--transition-fast);
+}
+
+.submit-button:hover:not(:disabled) {
+  transform: scale(1.05);
+  box-shadow: var(--shadow-glow);
+}
+
+.submit-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.result-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-md);
+}
+
+.result-correct {
+  color: var(--color-success);
+}
+
+.result-wrong {
+  color: var(--color-error);
+}
+
+.error-message {
+  color: var(--color-error);
+  font-size: var(--text-sm);
+  margin: 0;
+}
+
+.correct-answer-display {
+  padding: var(--space-md);
+  background: rgba(56, 201, 118, 0.1);
+  border: 1px solid var(--color-success);
+  border-radius: var(--radius-md);
+  color: var(--color-success);
+}
+
+.correct-answer-display strong {
+  font-size: var(--text-lg);
+  margin-left: var(--space-sm);
+}

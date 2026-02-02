@@ -1,0 +1,72 @@
+.feedback-panel {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-md);
+  padding: var(--space-lg);
+  border-radius: var(--radius-lg);
+  animation: fadeSlideIn var(--transition-normal) ease;
+}
+
+.feedback-correct {
+  background: rgba(56, 201, 118, 0.15);
+  border: 1px solid rgba(56, 201, 118, 0.3);
+}
+
+.feedback-wrong {
+  background: rgba(255, 87, 87, 0.15);
+  border: 1px solid rgba(255, 87, 87, 0.3);
+}
+
+.feedback-icon {
+  flex-shrink: 0;
+}
+
+.feedback-correct .feedback-icon {
+  color: var(--color-success);
+}
+
+.feedback-wrong .feedback-icon {
+  color: var(--color-error);
+}
+
+.feedback-content {
+  flex: 1;
+}
+
+.feedback-title {
+  font-size: var(--text-lg);
+  font-weight: var(--font-bold);
+  margin-bottom: var(--space-xs);
+}
+
+.feedback-correct .feedback-title {
+  color: var(--color-success);
+}
+
+.feedback-wrong .feedback-title {
+  color: var(--color-error);
+}
+
+.feedback-message {
+  color: var(--color-gray-300);
+  font-size: var(--text-sm);
+  margin: 0;
+}
+
+.xp-earned {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-top: var(--space-sm);
+  color: var(--color-warning);
+  font-weight: var(--font-bold);
+}
+
+.hint-penalty {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-size: var(--text-xs);
+  color: var(--color-gray-400);
+  font-weight: var(--font-normal);
+}

@@ -1,0 +1,369 @@
+.print-exam-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: var(--z-modal);
+  display: flex;
+  flex-direction: column;
+}
+
+.print-exam-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.print-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: var(--color-gray-400);
+  font-size: var(--text-xl);
+}
+
+/* Toolbar */
+.print-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-md) var(--space-xl);
+  background: var(--glass-bg-dark);
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.toolbar-left {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  color: var(--color-white);
+  font-weight: var(--font-medium);
+}
+
+.toolbar-center {
+  display: flex;
+  gap: var(--space-xs);
+}
+
+.toggle-btn {
+  padding: var(--space-sm) var(--space-md);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  color: var(--color-gray-300);
+  font-size: var(--text-sm);
+  transition: all var(--transition-fast);
+}
+
+.toggle-btn:hover {
+  color: var(--color-white);
+  border-color: var(--color-primary);
+}
+
+.toggle-btn.active {
+  background: var(--gradient-primary);
+  border-color: transparent;
+  color: var(--color-white);
+}
+
+.toolbar-right {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.print-btn {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-md);
+  background: var(--gradient-success);
+  border-radius: var(--radius-md);
+  color: var(--color-gray-900);
+  font-weight: var(--font-semibold);
+  transition: all var(--transition-fast);
+}
+
+.print-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(56, 201, 118, 0.4);
+}
+
+.close-btn {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-full);
+  color: var(--color-gray-400);
+  transition: all var(--transition-fast);
+}
+
+.close-btn:hover {
+  color: var(--color-white);
+  background: var(--color-error);
+  border-color: var(--color-error);
+}
+
+/* Exam Paper */
+.exam-paper {
+  flex: 1;
+  background: white;
+  color: black;
+  overflow-y: auto;
+  padding: 60px;
+  max-width: 210mm;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.paper-header {
+  text-align: center;
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #333;
+}
+
+.paper-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.paper-meta {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  text-align: left;
+  margin-bottom: 30px;
+  font-size: 14px;
+}
+
+.paper-meta p {
+  margin: 0;
+}
+
+.student-info {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+}
+
+.info-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.info-line {
+  width: 200px;
+  height: 1px;
+  background: #333;
+  border-bottom: 1px solid #333;
+}
+
+.info-line.short {
+  width: 80px;
+}
+
+/* Questions */
+.questions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.question-item {
+  page-break-inside: avoid;
+}
+
+.question-header-row {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.question-num {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.question-module {
+  font-size: 14px;
+  color: #666;
+  font-style: italic;
+}
+
+.question-points {
+  font-size: 14px;
+  color: #666;
+  margin-left: auto;
+}
+
+.question-text-print {
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.options-print {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 40px;
+  margin-left: 20px;
+}
+
+.option-print {
+  display: flex;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.option-letter {
+  font-weight: bold;
+  min-width: 20px;
+}
+
+.answer-blank {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 20px;
+  margin-top: 15px;
+}
+
+.blank-line {
+  flex: 1;
+  max-width: 300px;
+  height: 30px;
+  border-bottom: 1px solid #333;
+}
+
+/* Footer */
+.paper-footer {
+  margin-top: 60px;
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #ccc;
+}
+
+.good-luck {
+  font-style: italic;
+  color: #666;
+}
+
+/* Answer Key */
+.answer-key {
+  margin-top: 20px;
+}
+
+.answer-key h3 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #333;
+}
+
+.answer-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.answer-item {
+  display: flex;
+  gap: 10px;
+  font-size: 14px;
+  padding: 8px;
+  background: #f5f5f5;
+  border-radius: 4px;
+}
+
+.answer-num {
+  font-weight: bold;
+  min-width: 25px;
+}
+
+.answer-value {
+  color: #2e7d32;
+  font-weight: bold;
+}
+
+/* Detailed Solutions */
+.detailed-solutions {
+  margin-top: 40px;
+}
+
+.solution-item {
+  margin-bottom: 30px;
+  page-break-inside: avoid;
+}
+
+.solution-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  margin-bottom: 10px;
+  color: #2e7d32;
+}
+
+.solution-steps {
+  margin-left: 20px;
+}
+
+.solution-step {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 5px;
+}
+
+.solution-tips {
+  font-size: 13px;
+  font-style: italic;
+  color: #666;
+  margin-top: 10px;
+  padding: 10px;
+  background: #fff3cd;
+  border-left: 3px solid #ffc107;
+}
+
+/* Print Styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  .print-exam-overlay {
+    position: static;
+    background: white;
+  }
+
+  .print-exam-container {
+    height: auto;
+  }
+
+  .exam-paper {
+    padding: 20px;
+    max-width: none;
+  }
+
+  .question-item {
+    page-break-inside: avoid;
+  }
+
+  .solution-item {
+    page-break-inside: avoid;
+  }
+}
+
+@page {
+  size: A4;
+  margin: 20mm;
+}

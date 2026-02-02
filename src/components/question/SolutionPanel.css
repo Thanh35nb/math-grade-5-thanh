@@ -1,0 +1,104 @@
+.solution-panel {
+  background: var(--glass-bg-dark);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+}
+
+.solution-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-lg);
+  background: rgba(91, 110, 247, 0.1);
+  border-bottom: 1px solid var(--glass-border);
+  color: var(--color-primary);
+}
+
+.solution-header h4 {
+  flex: 1;
+  margin: 0;
+  color: var(--color-white);
+}
+
+.solution-status {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: var(--space-xs) var(--space-md);
+  border-radius: var(--radius-full);
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+}
+
+.status-correct {
+  background: rgba(56, 201, 118, 0.2);
+  color: var(--color-success);
+}
+
+.status-wrong {
+  background: rgba(255, 87, 87, 0.2);
+  color: var(--color-error);
+}
+
+.solution-steps {
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.solution-step {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-md);
+  padding: var(--space-md);
+  background: var(--glass-bg);
+  border-radius: var(--radius-md);
+  border-left: 3px solid var(--color-primary);
+}
+
+.step-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  background: var(--gradient-primary);
+  border-radius: var(--radius-md);
+  font-size: var(--text-sm);
+  font-weight: var(--font-bold);
+  color: var(--color-white);
+  flex-shrink: 0;
+}
+
+.step-text {
+  flex: 1;
+  color: var(--color-gray-200);
+  margin: 0;
+  line-height: var(--leading-relaxed);
+}
+
+.solution-tips {
+  margin: 0 var(--space-lg) var(--space-lg);
+  padding: var(--space-md) var(--space-lg);
+  background: rgba(255, 167, 38, 0.1);
+  border: 1px solid rgba(255, 167, 38, 0.2);
+  border-radius: var(--radius-md);
+}
+
+.tips-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  color: var(--color-warning);
+  font-weight: var(--font-semibold);
+  margin-bottom: var(--space-sm);
+}
+
+.tips-text {
+  color: var(--color-gray-300);
+  font-size: var(--text-sm);
+  font-style: italic;
+  margin: 0;
+}
